@@ -1,3 +1,18 @@
+<?php
+
+    require_once "src/Cliente.php";
+
+    $clienteA = new Cliente();
+    $clienteB = new Cliente();
+
+    $clienteA->nome = "Monica";
+    $clienteA->idade = 25;
+    $clienteA->email = "monica@gmail.com";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,5 +24,8 @@
     <h1>Exemplos de PHP com POO</h1>
     <hr>
     <h2>Trabalhando com classes e objetos</h2>
+
+    <h3>Visualizando a estrutura dos objetos</h3>
+    <pre><?=var_dump($clienteA, $clienteB)?></pre>
 </body>
 </html>

@@ -9,23 +9,53 @@
     $clienteA->idade = 25;
     $clienteA->email = "monica@gmail.com";
 
+     $clienteB->nome = "Jon";
+    $clienteB->idade = 15;
+    $clienteB->email = "jon@gmail.com";
+
+
+
 ?>
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
+
     <h1>Exemplos de PHP com POO</h1>
     <hr>
     <h2>Trabalhando com classes e objetos</h2>
 
     <h3>Visualizando a estrutura dos objetos</h3>
     <pre><?=var_dump($clienteA, $clienteB)?></pre>
+
+    <h3>Acessando/lendo os dados dos objetos</h3>
+
+    <h4>Cliente A</h4>
+    <ul>
+        <li>Nome: <?=$clienteA->nome?></li>
+        <li>Idade: <?=$clienteA->idade?> anos</li>
+        <li>E-mail: <?=$clienteA->email?></li>
+    </ul>
+
+        <h4>Cliente B</h4>
+    <ul>
+        <li>Nome: <?=$clienteB->nome?></li>
+        <li>Idade: <?=$clienteB->idade?> anos</li>
+        <li>E-mail: <?=$clienteB->email?></li>
+    </ul>
+
+    <p>O cliente(a) <?= $clienteA->nome?> possue <?=$clienteA->idade?> anos e atualmente este é o seu E-mail: <?=$clienteA->email?></p>
+
+
+    <?=$clienteA->mostrarDados()?>
 </body>
 </html>

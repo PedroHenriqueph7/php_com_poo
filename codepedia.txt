@@ -1,0 +1,178 @@
+
+---
+
+## 🧱 Os 4 Pilares da Programação Orientada a Objetos (POO) – com exemplos em Java
+
+---
+
+### 1. **Encapsulamento**
+
+**Definição:**  
+Oculta os detalhes internos de uma classe, expondo apenas o necessário por meio de métodos públicos.
+
+**Exemplo em Java:**
+```java
+public class ContaBancaria {
+    private double saldo;
+
+    public ContaBancaria(double saldoInicial) {
+        this.saldo = saldoInicial;
+    }
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}
+```
+🔒 O atributo `saldo` está encapsulado e só pode ser acessado por métodos públicos.
+
+---
+
+### 2. **Herança**
+
+**Definição:**  
+Permite que uma classe herde atributos e métodos de outra, promovendo reuso de código.
+
+**Exemplo em Java:**
+```java
+public class Animal {
+    public void emitirSom() {
+        System.out.println("O animal faz um som.");
+    }
+}
+
+public class Cachorro extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O cachorro late.");
+    }
+}
+```
+🐶 A classe `Cachorro` herda de `Animal` e sobrescreve o método `emitirSom`.
+
+---
+
+### 3. **Polimorfismo**
+
+**Definição:**  
+Permite que objetos de diferentes classes respondam de maneira diferente à mesma mensagem (método).
+
+**Exemplo em Java:**
+```java
+public class TestePolimorfismo {
+    public static void fazerAnimalEmitirSom(Animal animal) {
+        animal.emitirSom();
+    }
+
+    public static void main(String[] args) {
+        Animal a1 = new Animal();
+        Animal a2 = new Cachorro();
+
+        fazerAnimalEmitirSom(a1); // "O animal faz um som."
+        fazerAnimalEmitirSom(a2); // "O cachorro late."
+    }
+}
+```
+🔁 O método `emitirSom()` se comporta de forma diferente dependendo do tipo do objeto.
+
+---
+
+### 4. **Abstração**
+
+**Definição:**  
+Foca nos comportamentos essenciais de um objeto, ignorando os detalhes de implementação.
+
+**Exemplo em Java:**
+```java
+abstract class Veiculo {
+    abstract void mover();
+}
+
+class Carro extends Veiculo {
+    @Override
+    void mover() {
+        System.out.println("O carro está se movendo.");
+    }
+}
+```
+🚗 A classe `Veiculo` é abstrata e define um comportamento que `Carro` deve implementar.
+
+---
+
+Claro! Aqui está a **comparação entre classe abstrata e interface em Java**, com exemplos simples e diretos:
+
+---
+
+## ☕ Classe Abstrata vs Interface em Java
+
+### 🔷 Classe Abstrata
+
+```java
+abstract class Animal {
+    String nome;
+
+    Animal(String nome) {
+        this.nome = nome;
+    }
+
+    void dormir() {
+        System.out.println(nome + " está dormindo...");
+    }
+
+    abstract void fazerSom();
+}
+
+class Cachorro extends Animal {
+    Cachorro(String nome) {
+        super(nome);
+    }
+
+    @Override
+    void fazerSom() {
+        System.out.println("Au au!");
+    }
+}
+```
+
+✅ **Quando usar:**  
+Use quando você quer **compartilhar código comum** (como o método `dormir`) e ainda forçar subclasses a implementar certos métodos (`fazerSom`).
+
+---
+
+### 🟩 Interface
+
+```java
+interface Voador {
+    void voar();
+}
+
+class Passaro implements Voador {
+    @Override
+    public void voar() {
+        System.out.println("O pássaro está voando!");
+    }
+}
+```
+
+✅ **Quando usar:**  
+Use quando você quer **definir um contrato** que várias classes podem implementar, **sem herança de código**. Ideal para **herança múltipla de comportamentos**.
+
+---
+
+### 🧠 Resumo Rápido
+
+| Característica         | Classe Abstrata         | Interface                  |
+|------------------------|--------------------------|-----------------------------|
+| Pode ter atributos     | ✅ Sim                   | ❌ Não (apenas constantes)  |
+| Métodos com corpo      | ✅ Sim                   | ✅ Desde Java 8 (default)   |
+| Herança múltipla       | ❌ Não                   | ✅ Sim                      |
+| Instanciável           | ❌ Não                   | ❌ Não                      |
+| Ideal para             | Compartilhar lógica base| Definir contratos           |
+
+---
+
+Se quiser, posso gerar um PDF com esse conteúdo ou montar um quadro comparativo visual. Deseja isso?

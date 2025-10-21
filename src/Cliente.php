@@ -6,7 +6,7 @@ class Cliente {
         public int $idade;
         public string $email;
         
-        public function mostrarDados() {
+        public function mostrarDados(): void {
                 echo "<div>
                          <h4>$this->nome</h4>
                          <p><b>E-mail de contado:</b> $this->email</p>

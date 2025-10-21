@@ -39,23 +39,7 @@
 
     <h3>Acessando/lendo os dados dos objetos</h3>
 
-    <h4>Cliente A</h4>
-    <ul>
-        <li>Nome: <?=$clienteA->nome?></li>
-        <li>Idade: <?=$clienteA->idade?> anos</li>
-        <li>E-mail: <?=$clienteA->email?></li>
-    </ul>
-
-        <h4>Cliente B</h4>
-    <ul>
-        <li>Nome: <?=$clienteB->nome?></li>
-        <li>Idade: <?=$clienteB->idade?> anos</li>
-        <li>E-mail: <?=$clienteB->email?></li>
-    </ul>
-
-    <p>O cliente(a) <?= $clienteA->nome?> possue <?=$clienteA->idade?> anos e atualmente este é o seu E-mail: <?=$clienteA->email?></p>
-
-
     <?=$clienteA->mostrarDados()?>
+    <?=$clienteB->mostrarDados()?>
 </body>
 </html>

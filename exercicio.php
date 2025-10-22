@@ -3,8 +3,8 @@
     require_once "src/Livro.php";
 
     $livroA = new Livro("A Boa Sorte", "Autor X");
-   $livroB = new Livro("Olhai os Lírios do Campo", "Autor Y");
-   $livroC = new Livro("Percy Jackson o Ladrão de Raios", "Rick", 387);
+    $livroB = new Livro("Olhai os Lírios do Campo", "Autor Y");
+    $livroC = new Livro("Percy Jackson o Ladrão de Raios", "Rick", 387);
 
 ?>
 
@@ -47,7 +47,12 @@
         <?=$livroC->mostrarDados()?>
     </div>
 
-    <?=$livroA->verificarQuantidadeCaracteresTitulo()?>
+    <div class="livros">
+        <?=$livroA->verificarQuantidadeCaracteresTitulo()?>
+    </div>
+
+    
+    
     
 </body>
 </html>

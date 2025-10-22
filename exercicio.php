@@ -2,18 +2,7 @@
 
     require_once "src/Livro.php";
 
-    $livroA = new Livro();
-    $livroB = new Livro();
-    $livroC = new Livro();
-
-    $livroA->titulo = "Olhai os Lirios no Campo";
-    $livroA->quantidade_de_paginas = 322;
-
-    $livroB->titulo = "A Boa Sorte";
-    $livroB->quantidade_de_paginas = 146;
-
-    $livroC->titulo = "Como fazer amigos e influenciar pessoas";
-    $livroC->quantidade_de_paginas = 257;
+   
 ?>
 
 

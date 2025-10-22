@@ -2,16 +2,10 @@
 
     require_once "src/Cliente.php";
 
-    $clienteA = new Cliente();
-    $clienteB = new Cliente();
+    $clienteA = new Cliente("Monica",25, "monica@gmail.com");
 
-    $clienteA->nome = "Monica";
-    $clienteA->idade = 25;
-    $clienteA->email = "monica@gmail.com";
-
-     $clienteB->nome = "Jon";
-    $clienteB->idade = 15;
-    $clienteB->email = "jon@gmail.com";
+    $clienteB = new Cliente("Jon", 15,"jon@gmail.com");
+    
 
 
 

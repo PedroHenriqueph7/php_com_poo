@@ -6,12 +6,10 @@
 
     $clienteB = new Cliente("Jon", 15,"jon@gmail.com");
     
-
+     $clienteC = new Cliente("Joaozinho", 40, "joaozinho@gmail.com", "11");
 
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,5 +33,6 @@
 
     <?=$clienteA->mostrarDados()?>
     <?=$clienteB->mostrarDados()?>
+    <?=$clienteC->mostrarDados()?>
 </body>
 </html>

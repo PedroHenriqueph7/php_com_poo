@@ -2,11 +2,11 @@
 
     require_once "src/Livro.php";
 
-   
+    $livroA = new Livro("A Boa Sorte", "Autor X");
+   $livroB = new Livro("Olhai os Lírios do Campo", "Autor Y");
+   $livroC = new Livro("Percy Jackson o Ladrão de Raios", "Rick", 387);
+
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +46,8 @@
     <div class="livros">
         <?=$livroC->mostrarDados()?>
     </div>
+
+    <?=$livroA->verificarQuantidadeCaracteresTitulo()?>
     
 </body>
 </html>

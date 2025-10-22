@@ -26,13 +26,20 @@
     <hr>
     <h2>Trabalhando com classes e objetos</h2>
 
-    <h3>Visualizando a estrutura dos objetos</h3>
-    <pre><?=var_dump($clienteA, $clienteB)?></pre>
-
     <h3>Acessando/lendo os dados dos objetos</h3>
 
-    <?=$clienteA->mostrarDados()?>
-    <?=$clienteB->mostrarDados()?>
-    <?=$clienteC->mostrarDados()?>
+    <?php 
+            // Sobrescrevendo o valor de um atributo do objeto
+           
+
+    ?>
+
+    <div>
+        <h4> <?=$clienteA->getNome();?></h4>
+        <p><b>Idade:</b><?=$clienteA->getIdade();?> </p>
+        <p><b>E-mail:</b> <?=$clienteA->getEmail()?> anos</p>
+    </div>
+
+   
 </body>
 </html>

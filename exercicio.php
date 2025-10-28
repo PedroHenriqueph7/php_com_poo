@@ -14,43 +14,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        .livros {
-            width: 250px;
-            height: 200px;
-            background-color:azure;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            
-            gap: 20px;
-            height: 100vh;
-        }
-
-    </style>
+   
 </head>
 <body>
     
-    <div class="livros">
-        <?=$livroA->mostrarDados()?>
-    </div>
-    <div class="livros">
-        <?=$livroB->mostrarDados()?>
-    </div>
-    <div class="livros">
-        <?=$livroC->mostrarDados()?>
-    </div>
+ 
+        <h4>Titulo: <?=$livroA->getTitulo();?></h4>
+        <p><b>Autor: </b><?=$livroA->getAutor();?> </p>
+        <p><b>Quantidade de Páginas: </b> <?=$livroA->getQuantidade_de_paginas()?></p>
 
-    <div class="livros">
-        <?=$livroA->verificarQuantidadeCaracteresTitulo()?>
-    </div>
+    
 
+    
     
     
     

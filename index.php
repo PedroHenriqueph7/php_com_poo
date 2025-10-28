@@ -38,8 +38,8 @@
         <h4> <?=$clienteA->getNome();?></h4>
         <p><b>Idade:</b><?=$clienteA->getIdade();?> </p>
         <p><b>E-mail:</b> <?=$clienteA->getEmail()?> anos</p>
+        <p>Telefone: <?=$clienteA->getTelefone() ?? "não informado" ?></p>
     </div>
-
-   
+    
 </body>
 </html>
